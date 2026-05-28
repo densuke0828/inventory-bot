@@ -1,0 +1,15 @@
+spring.application.name=inventory-bot
+
+# LINE Bot
+line.bot.channel-token=
+line.bot.channel-secret=
+line.bot.handler.path=/callback
+
+# DB
+spring.datasource.url=jdbc:postgresql://localhost:5432/linebot_inventory
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+
+# Anthropic
+anthropic.api-key=

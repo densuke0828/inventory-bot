@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "line.bot.handler",
+      "type": "com.linecorp.bot.spring.boot.handler.properties.HandlerProperties",
+      "sourceType": "com.linecorp.bot.spring.boot.handler.properties.HandlerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "line.bot.handler.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.linecorp.bot.spring.boot.handler.properties.HandlerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "line.bot.handler.path",
+      "type": "java.net.URI",
+      "sourceType": "com.linecorp.bot.spring.boot.handler.properties.HandlerProperties",
+      "defaultValue": "\/callback"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}
