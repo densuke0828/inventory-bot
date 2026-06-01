@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 public class InventoryService {
     private final ItemRepository itemRepository;
     private final PurchaseHistoryRepository purchaseHistoryRepository;
+    private final ClaudeService claudeService;
 
     public String processMessage(String text) {
         if (text.contains("不足") || text.contains("足りない") || text.contains("買うもの")) {
@@ -52,7 +53,7 @@ public class InventoryService {
             String itemName = extractItemName(text, "いくつ", "在庫", "残り");
             return searchByName(itemName);
         }
-        return "わかりませんでした。「不足」「〇〇 買った」「登録」などで話しかけてください";
+        return claudeService.ask(text);
     }
 
     private String getInsufficientItems() {
